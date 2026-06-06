@@ -4,12 +4,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Astralya</title>
+<title>ASTRALYS</title>
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family:Arial,sans-serif;
+}
+
+body{
     background:#0f172a;
     color:white;
     text-align:center;
@@ -20,8 +25,15 @@ header{
 }
 
 h1{
-    font-size:60px;
+    font-size:70px;
     color:#38bdf8;
+    text-shadow:0 0 20px #38bdf8;
+}
+
+.subtitle{
+    font-size:20px;
+    color:#cbd5e1;
+    margin-top:10px;
 }
 
 .btn{
@@ -31,6 +43,7 @@ h1{
     border-radius:10px;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
 }
 
 .discord{
@@ -38,9 +51,17 @@ h1{
     color:white;
 }
 
+.discord:hover{
+    transform:scale(1.05);
+}
+
 .vote{
     background:#38bdf8;
     color:black;
+}
+
+.vote:hover{
+    transform:scale(1.05);
 }
 
 .cards{
@@ -58,8 +79,17 @@ h1{
     border-radius:15px;
 }
 
+.card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+section{
+    margin-top:50px;
+}
+
 footer{
-    margin-top:40px;
+    margin-top:50px;
     padding:20px;
     background:#020617;
 }
@@ -70,72 +100,94 @@ footer{
 <body>
 
 <header>
-<h1>ASTRALYA</h1>
+    <h1>ASTRALYS</h1>
 
-<p>
-Bienvenue sur le serveur Astralya !
+```
+<p class="subtitle">
+    Bienvenue sur le serveur Astralys !
 </p>
 
 <a href="https://discord.gg/JAq4qahE2A" class="btn discord" target="_blank">
-💬 Rejoindre le Discord
+    💬 Rejoindre le Discord
 </a>
+```
+
 </header>
 
-<h2>⚔️ Nos avantages</h2>
+<section>
+    <h2>⚔️ Pourquoi rejoindre Astralys ?</h2>
 
+```
+<div class="cards">
+    <div class="card">
+        <h3>Aventure</h3>
+        <p>Un monde rempli de défis et d'exploration.</p>
+    </div>
+
+    <div class="card">
+        <h3>Communauté</h3>
+        <p>Une communauté active et accueillante.</p>
+    </div>
+
+    <div class="card">
+        <h3>Événements</h3>
+        <p>Des animations régulières avec récompenses.</p>
+    </div>
+</div>
+```
+
+</section>
+
+<section>
+    <h2>🗳️ Vote pour Astralys</h2>
+
+```
 <div class="cards">
 
-<div class="card">
-<h3>Aventure</h3>
-<p>Un serveur unique rempli de défis.</p>
-</div>
+    <div class="card">
+        <h3>Vote #1</h3>
+        <a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">
+            Voter
+        </a>
+    </div>
 
-<div class="card">
-<h3>Communauté</h3>
-<p>Une communauté active et sympathique.</p>
-</div>
+    <div class="card">
+        <h3>Vote #2</h3>
+        <a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">
+            Voter
+        </a>
+    </div>
 
-<div class="card">
-<h3>Événements</h3>
-<p>Des récompenses et animations régulières.</p>
-</div>
+    <div class="card">
+        <h3>Vote #3</h3>
+        <a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">
+            Voter
+        </a>
+    </div>
 
-</div>
+    <div class="card">
+        <h3>Vote #4</h3>
+        <a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">
+            Voter
+        </a>
+    </div>
 
-<h2>🗳️ Sites de vote</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Vote #1</h3>
-<a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #2</h3>
-<a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #3</h3>
-<a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #4</h3>
-<a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #5</h3>
-<a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">Voter</a>
-</div>
+    <div class="card">
+        <h3>Vote #5</h3>
+        <a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">
+            Voter
+        </a>
+    </div>
 
 </div>
+```
+
+</section>
 
 <footer>
-© 2026 Astralya
+    © 2026 ASTRALYS - Tous droits réservés
 </footer>
 
 </body>
 </html>
+
