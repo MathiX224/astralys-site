@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -7,66 +6,186 @@
 <title>Règlement - ASTRALYS</title>
 
 <style>
-body{
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-background:#0f172a;
+}
+
+body{
+background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#312e81,#0f172a);
+background-size:400% 400%;
+animation:galaxy 15s ease infinite;
 color:white;
-max-width:1100px;
+padding:40px 20px;
+}
+
+@keyframes galaxy{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+max-width:1200px;
 margin:auto;
-padding:20px;
-line-height:1.8;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(56,189,248,.3);
+border-radius:20px;
+padding:40px;
+box-shadow:0 0 30px rgba(56,189,248,.3);
 }
 
-h1,h2{
+h1{
+text-align:center;
+font-size:50px;
+margin-bottom:30px;
 color:#38bdf8;
+text-shadow:
+0 0 10px #38bdf8,
+0 0 20px #38bdf8,
+0 0 40px #38bdf8;
 }
 
-a{
+h2{
+color:#38bdf8;
+margin-top:30px;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.8;
+margin-bottom:10px;
+}
+
+.warning{
+color:#ffcc00;
+font-weight:bold;
+font-size:20px;
+margin-top:20px;
+}
+
+.btn{
 display:inline-block;
-margin:20px 0;
-padding:10px 20px;
+margin-top:30px;
+padding:15px 30px;
 background:#38bdf8;
 color:black;
 text-decoration:none;
-border-radius:8px;
+font-weight:bold;
+border-radius:12px;
+box-shadow:0 0 20px #38bdf8;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+footer{
+margin-top:40px;
+text-align:center;
+opacity:.8;
 }
 </style>
-
 </head>
-
 <body>
 
-<a href="index.html">⬅ Retour à l'accueil</a>
+<div class="container">
 
-<h1>📜 Règlement d'ASTRALYS</h1>
+<h1>📜 RÈGLEMENT D'ASTRALYS</h1>
 
-<p><b>🤝 Respect et bonne conduite</b><br>
-Respectez tous les joueurs et les membres du staff. Les insultes, discriminations, provocations, menaces et harcèlement sont interdits.</p>
+<h2>🤝 Respect et bonne conduite</h2>
 
-<p><b>🚫 Triche et avantages déloyaux</b><br>
-Cheats, hacks, x-ray, fly, macros, auto-clickers et tout avantage injuste sont interdits.<br>
-<b>Meteor Client = BAN PERMANENT</b></p>
+<p>Le respect est la base d'une bonne expérience de jeu pour tous.</p>
 
-<p><b>💬 Chat, spam et publicité</b><br>
-Le spam, flood et la publicité non autorisée sont interdits.</p>
+<p>Respectez tous les joueurs ainsi que les membres du staff.</p>
+<p>Les insultes, menaces, provocations, discriminations, propos haineux et le harcèlement sont strictement interdits.</p>
+<p>Les pseudos, skins, constructions ou messages à caractère offensant, choquant ou inapproprié sont interdits.</p>
+<p>Tout comportement visant à nuire volontairement à l'expérience de jeu d'un autre joueur pourra être sanctionné.</p>
 
-<p><b>🛡️ Respect du staff</b><br>
-Les décisions du staff doivent être respectées.</p>
+<h2>🚫 Triche et avantages déloyaux</h2>
 
-<p><b>⚔️ PvP & Gameplay</b><br>
-Le spawnkill et les abus de bugs sont interdits.</p>
+<p>Afin de garantir une expérience de jeu équitable :</p>
 
-<p><b>💰 Échanges et arnaques</b><br>
-Les arnaques sont interdites. Utilisez l'AH lorsque possible.</p>
+<p>L'utilisation de cheats, hacks, clients modifiés, x-ray, fly, auto-clickers, macros ou tout autre logiciel procurant un avantage injuste est strictement interdite.</p>
+<p>L'exploitation de bugs ou failles du serveur à des fins personnelles est interdite.</p>
+<p>Tout bug découvert doit être signalé au staff dans les plus brefs délais.</p>
+<p>Les mods autorisés sont ceux qui n'apportent aucun avantage en jeu (optimisation graphique, affichage d'informations basiques, etc.).</p>
 
-<p><b>📢 Communication avec le staff</b><br>
-Le staff est à l'écoute des suggestions et signalements.</p>
+<h2>💬 Chat, spam et publicité</h2>
 
-<p><b>🚨 Signalement</b><br>
-Tout comportement interdit doit être signalé au staff.</p>
+<p>Pour préserver une bonne ambiance :</p>
 
-<p><b>‼️ Important</b><br>
-Le règlement peut changer à tout moment.</p>
+<p>Le spam, flood, messages répétitifs et abus de majuscules sont interdits.</p>
+<p>Les messages destinés à provoquer ou perturber les discussions sont interdits.</p>
+<p>La publicité pour d'autres serveurs, Discords, sites web ou réseaux sociaux est interdite sans autorisation préalable du staff.</p>
+
+<h2>🛡️ Respect du staff</h2>
+
+<p>Le staff est présent pour assurer le bon fonctionnement du serveur.</p>
+<p>Les décisions du staff doivent être respectées.</p>
+<p>Contester une sanction doit se faire calmement via les moyens prévus à cet effet.</p>
+<p>Mentir au staff, fournir de fausses informations ou tenter de contourner une sanction aggravera votre situation.</p>
+<p>Le staff se réserve le droit d'adapter les sanctions en fonction de la gravité des faits et des antécédents du joueur.</p>
+
+<h2>⚔️ PvP & Gameplay</h2>
+
+<p><strong>Règles PvP :</strong></p>
+
+<p>Le PvP doit rester compétitif et respectueux.</p>
+<p>Le spawnkill (tuer continuellement un joueur à son point d'apparition) est interdit.</p>
+<p>Les pièges abusifs ou impossibles à éviter peuvent être sanctionnés.</p>
+<p>Le PvP forcé en dehors des zones ou situations prévues par le serveur est interdit.</p>
+<p>Toute utilisation de bugs ou mécaniques abusives en combat est interdite.</p>
+
+<h2>💰 Échanges et arnaques</h2>
+
+<p>Les échanges doivent se dérouler dans un climat de confiance.</p>
+
+<p>Les arnaques, tromperies et abus de confiance sont strictement interdits.</p>
+<p>Respectez les accords conclus avec les autres joueurs.</p>
+<p>En cas de litige, le staff pourra intervenir uniquement si des preuves suffisantes sont fournies.</p>
+<p>Lorsque cela est possible, privilégiez l'utilisation de l'Hôtel des Ventes (AH) pour sécuriser les transactions.</p>
+<p>Tant que l'AH n'est pas saturé ou limité en emplacements, les joueurs peuvent également effectuer leurs ventes directement en jeu.</p>
+<p>Lors d'une vente directe entre joueurs, l'acheteur doit remettre le montant convenu via la commande /pay après accord entre les deux parties.</p>
+<p>Avant de réaliser une transaction directe, il est fortement recommandé de vérifier le contenu de l'échange afin d'éviter tout malentendu.</p>
+
+<p class="warning">
+⚠️ Le staff ne remboursera pas les pertes résultant d'un échange effectué sans preuve ou sans avoir vérifié correctement la transaction
+</p>
+
+<h2>📢 Communication avec le staff</h2>
+
+<p>Le staff est présent pour vous aider et améliorer continuellement le serveur.</p>
+
+<p>Le staff est toujours à l'écoute des joueurs et reste ouvert à toute suggestion concernant le serveur.</p>
+<p>Si vous découvrez un bug, une faille ou avez une idée d'amélioration, n'hésitez pas à en informer le staff.</p>
+<p>Toute proposition visant à améliorer le gameplay, les événements ou le fonctionnement du serveur sera étudiée avec attention.</p>
+<p>Les joueurs sont encouragés à signaler les bugs plutôt qu'à les exploiter.</p>
+
+<h2>🚨 Signalement des tricheurs et comportements interdits</h2>
+
+<p>Afin de préserver un environnement de jeu équitable pour tous :</p>
+
+<p>Tout joueur témoin d'une triche, d'un bug exploité ou d'un comportement interdit doit le signaler au staff dans les plus brefs délais.</p>
+
+<p class="warning">
+‼️ Le règlement peut changer à tout moments ! C'est votre rôle de vérifier le règlement régulièrement !
+</p>
+
+<center>
+<a href="index.html" class="btn">⬅ Retour à l'accueil</a>
+</center>
+
+<footer>
+© 2026 ASTRALYS - Tous droits réservés<br>
+Développement du site par <strong>MathiX</strong>
+</footer>
+
+</div>
 
 </body>
 </html>
