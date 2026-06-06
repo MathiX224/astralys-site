@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 
 <head>
@@ -17,9 +16,9 @@ font-family:Arial,sans-serif;
 }
 
 body{
-color:white;
 overflow-x:hidden;
-background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#312e81,#0f172a);
+color:white;
+background:linear-gradient(-45deg,#050816,#111827,#1e1b4b,#312e81,#050816);
 background-size:400% 400%;
 animation:galaxy 15s ease infinite;
 }
@@ -38,104 +37,89 @@ width:100%;
 height:100%;
 z-index:-1;
 background-image:
-radial-gradient(2px 2px at 20px 30px,#fff,transparent),
-radial-gradient(2px 2px at 80px 90px,#38bdf8,transparent),
-radial-gradient(1px 1px at 150px 50px,#fff,transparent),
-radial-gradient(2px 2px at 250px 150px,#8b5cf6,transparent);
-background-size:300px 300px;
-animation:starsMove 20s linear infinite;
+radial-gradient(2px 2px at 50px 50px,#fff,transparent),
+radial-gradient(2px 2px at 150px 100px,#38bdf8,transparent),
+radial-gradient(1px 1px at 250px 150px,#fff,transparent),
+radial-gradient(2px 2px at 350px 200px,#8b5cf6,transparent);
+background-size:400px 400px;
+animation:starsMove 25s linear infinite;
 }
 
 @keyframes starsMove{
 from{transform:translateY(0);}
-to{transform:translateY(-300px);}
+to{transform:translateY(-400px);}
 }
 
 .hero{
 display:flex;
-align-items:center;
 justify-content:center;
-gap:60px;
-padding:80px 20px;
+align-items:center;
+gap:30px;
 min-height:100vh;
+padding:20px;
 flex-wrap:wrap;
 }
 
 .logo{
-width:500px;
+width:450px;
 max-width:90%;
-animation:
-float 4s ease-in-out infinite,
-glowPulse 4s ease-in-out infinite;
+animation:logoFloat 4s ease-in-out infinite;
 filter:
 drop-shadow(0 0 20px #38bdf8)
-drop-shadow(0 0 40px #8b5cf6);
+drop-shadow(0 0 50px #8b5cf6);
 }
 
-@keyframes float{
+@keyframes logoFloat{
 0%{transform:translateY(0);}
-25%{transform:translateY(-20px);}
+25%{transform:translateY(-15px);}
 50%{transform:translateY(0);}
-75%{transform:translateY(20px);}
+75%{transform:translateY(15px);}
 100%{transform:translateY(0);}
 }
 
-@keyframes glowPulse{
-0%{
-filter:
-drop-shadow(0 0 20px #38bdf8)
-drop-shadow(0 0 40px #8b5cf6);
-}
-50%{
-filter:
-drop-shadow(0 0 40px #38bdf8)
-drop-shadow(0 0 80px #8b5cf6);
-}
-100%{
-filter:
-drop-shadow(0 0 20px #38bdf8)
-drop-shadow(0 0 40px #8b5cf6);
-}
-}
-
 .hero-text{
-max-width:600px;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
 }
 
 h1{
 font-size:110px;
+line-height:1;
 color:#38bdf8;
-text-transform:uppercase;
+text-shadow:
+0 0 15px #38bdf8,
+0 0 30px #38bdf8,
+0 0 60px #38bdf8;
 animation:neon 2s infinite alternate;
+margin-bottom:25px;
 }
 
 @keyframes neon{
 from{
 text-shadow:
-0 0 10px #38bdf8,
-0 0 20px #38bdf8,
-0 0 40px #38bdf8;
+0 0 15px #38bdf8,
+0 0 30px #38bdf8,
+0 0 60px #38bdf8;
 }
 to{
 text-shadow:
-0 0 20px #38bdf8,
-0 0 40px #38bdf8,
-0 0 80px #38bdf8,
+0 0 30px #38bdf8,
+0 0 60px #38bdf8,
 0 0 120px #38bdf8;
 }
 }
 
-.subtitle{
-font-size:24px;
-margin:20px 0;
-color:#e2e8f0;
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
 padding:15px 30px;
-margin:10px;
-border-radius:12px;
+border-radius:15px;
 text-decoration:none;
 font-weight:bold;
 transition:.3s;
@@ -153,60 +137,15 @@ color:white;
 box-shadow:0 0 20px #8b5cf6;
 }
 
-.vote{
-background:#38bdf8;
-color:black;
-box-shadow:0 0 20px #38bdf8;
-}
-
 .btn:hover{
 transform:translateY(-5px) scale(1.05);
 }
 
-section{
-padding:60px 20px;
-}
-
-.section-title{
-text-align:center;
-font-size:40px;
-color:#38bdf8;
-margin-bottom:40px;
-}
-
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-}
-
-.card{
-width:300px;
-padding:25px;
-border-radius:20px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-border:1px solid rgba(56,189,248,0.3);
-transition:.4s;
-text-align:center;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(56,189,248,0.6);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#38bdf8;
-}
-
 footer{
-margin-top:60px;
 padding:25px;
 text-align:center;
-background:rgba(0,0,0,0.3);
+background:rgba(0,0,0,.25);
+font-size:15px;
 }
 
 @media(max-width:900px){
@@ -214,6 +153,10 @@ background:rgba(0,0,0,0.3);
 .hero{
 flex-direction:column;
 text-align:center;
+}
+
+.hero-text{
+align-items:center;
 }
 
 .logo{
@@ -227,7 +170,6 @@ font-size:70px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -242,76 +184,19 @@ font-size:70px;
 
 <h1>ASTRALYS</h1>
 
-<p class="subtitle">
-Serveur Minecraft Survie • Économie • Claims • Événements
-</p>
+<div class="buttons">
 
-<a href="https://discord.gg/JAq4qahE2A" class="btn discord" target="_blank">
+<a href="https://discord.gg/JAq4qahE2A"
+class="btn discord"
+target="_blank">
 💬 Rejoindre le Discord
 </a>
 
-<a href="reglement.html" class="btn rules">
+<a href="reglement.html"
+class="btn rules">
 📜 Voir le règlement
 </a>
 
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">⚔️ Pourquoi rejoindre Astralys ?</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>🌍 Survie</h3>
-<p>Explore un monde unique rempli d'aventures.</p>
-</div>
-
-<div class="card">
-<h3>💰 Économie</h3>
-<p>Commerce, ventes et progression économique.</p>
-</div>
-
-<div class="card">
-<h3>🎉 Événements</h3>
-<p>Participe à des événements exclusifs et gagne des récompenses.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">🗳️ Vote pour Astralys</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Vote #1</h3>
-<a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #2</h3>
-<a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #3</h3>
-<a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #4</h3>
-<a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">Voter</a>
-</div>
-
-<div class="card">
-<h3>Vote #5</h3>
-<a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">Voter</a>
 </div>
 
 </div>
@@ -319,10 +204,8 @@ Serveur Minecraft Survie • Économie • Claims • Événements
 </section>
 
 <footer>
-
 © 2026 ASTRALYS - Tous droits réservés<br>
 Développement et design du site par <strong>MathiX</strong>
-
 </footer>
 
 </body>
