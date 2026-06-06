@@ -1,1 +1,295 @@
+<!DOCTYPE html>
 
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Votes - Astralys</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+color:white;
+overflow-x:hidden;
+background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#312e81,#0f172a);
+background-size:400% 400%;
+animation:galaxy 15s ease infinite;
+min-height:100vh;
+}
+
+@keyframes galaxy{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background-image:
+radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+radial-gradient(2px 2px at 80px 90px,#38bdf8,transparent),
+radial-gradient(1px 1px at 150px 50px,#fff,transparent),
+radial-gradient(2px 2px at 250px 150px,#8b5cf6,transparent),
+radial-gradient(2px 2px at 350px 250px,#fff,transparent);
+background-size:400px 400px;
+animation:starsMove 25s linear infinite;
+}
+
+@keyframes starsMove{
+from{transform:translateY(0);}
+to{transform:translateY(-400px);}
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+}
+
+.logo{
+width:220px;
+max-width:80%;
+animation:
+floatLogo 4s ease-in-out infinite,
+glowLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes glowLogo{
+0%{
+filter:
+drop-shadow(0 0 20px #38bdf8)
+drop-shadow(0 0 40px #8b5cf6);
+}
+50%{
+filter:
+drop-shadow(0 0 40px #38bdf8)
+drop-shadow(0 0 80px #8b5cf6);
+}
+100%{
+filter:
+drop-shadow(0 0 20px #38bdf8)
+drop-shadow(0 0 40px #8b5cf6);
+}
+}
+
+h1{
+font-size:70px;
+color:#38bdf8;
+text-shadow:
+0 0 10px #38bdf8,
+0 0 20px #38bdf8,
+0 0 40px #38bdf8;
+}
+
+.subtitle{
+font-size:22px;
+color:#e2e8f0;
+margin-top:15px;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+color:#38bdf8;
+margin-bottom:40px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:20px;
+}
+
+.card{
+width:300px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(56,189,248,0.3);
+text-align:center;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(56,189,248,.6);
+}
+
+.card h3{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+.card p{
+margin-bottom:15px;
+color:#cbd5e1;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+color:white;
+}
+
+.vote{
+background:#38bdf8;
+box-shadow:0 0 20px #38bdf8;
+}
+
+.home{
+background:#8b5cf6;
+box-shadow:0 0 20px #8b5cf6;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+.home-container{
+text-align:center;
+margin:40px 0;
+}
+
+footer{
+margin-top:50px;
+padding:25px;
+text-align:center;
+background:rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:45px;
+}
+
+.logo{
+width:160px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.card{
+width:100%;
+max-width:350px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header>
+
+<img src="logo.png" alt="Logo Astralys" class="logo">
+
+<h1>🗳️ VOTES</h1>
+
+<p class="subtitle">
+Votez chaque jour pour soutenir Astralys et obtenir des récompenses en jeu !
+</p>
+
+</header>
+
+<section>
+
+<h2 class="section-title">🌟 Sites de vote</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Vote #1</h3>
+<p>Soutenez Astralys.</p>
+<a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">
+Voter
+</a>
+</div>
+
+<div class="card">
+<h3>Vote #2</h3>
+<p>Soutenez Astralys.</p>
+<a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">
+Voter
+</a>
+</div>
+
+<div class="card">
+<h3>Vote #3</h3>
+<p>Soutenez Astralys.</p>
+<a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">
+Voter
+</a>
+</div>
+
+<div class="card">
+<h3>Vote #4</h3>
+<p>Soutenez Astralys.</p>
+<a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">
+Voter
+</a>
+</div>
+
+<div class="card">
+<h3>Vote #5</h3>
+<p>Soutenez Astralys.</p>
+<a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">
+Voter
+</a>
+</div>
+
+</div>
+
+</section>
+
+<div class="home-container">
+
+<a href="index.html" class="btn home">
+🏠 Retour à l'accueil
+</a>
+
+</div>
+
+<footer>
+
+© 2026 ASTRALYS - Tous droits réservés<br>
+Développement et design du site par <strong>MathiX</strong>
+
+</footer>
+
+</body>
+</html>
