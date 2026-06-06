@@ -7,51 +7,120 @@
 <title>ASTRALYS</title>
 
 <style>
-body{
+*{
 margin:0;
-font-family:Arial,sans-serif;
-color:white;
-text-align:center;
-background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#312e81);
-background-size:400% 400%;
-animation:bg 15s ease infinite;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial',sans-serif;
 }
 
-@keyframes bg{
+body{
+color:white;
+overflow-x:hidden;
+background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#312e81,#0f172a);
+background-size:400% 400%;
+animation:galaxy 15s ease infinite;
+}
+
+@keyframes galaxy{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
 
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background-image:
+radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+radial-gradient(2px 2px at 80px 90px,#38bdf8,transparent),
+radial-gradient(1px 1px at 150px 50px,#fff,transparent),
+radial-gradient(2px 2px at 250px 150px,#38bdf8,transparent);
+background-size:300px 300px;
+animation:starsMove 20s linear infinite;
+}
+
+@keyframes starsMove{
+from{transform:translateY(0);}
+to{transform:translateY(-300px);}
+}
+
+header{
+padding:100px 20px;
+text-align:center;
+}
+
 h1{
-font-size:80px;
+font-size:90px;
 color:#38bdf8;
-text-shadow:0 0 10px #38bdf8,0 0 30px #38bdf8,0 0 60px #38bdf8;
+text-transform:uppercase;
 animation:neon 2s infinite alternate;
 }
 
 @keyframes neon{
-from{opacity:.8;}
-to{opacity:1;}
+from{
+text-shadow:
+0 0 10px #38bdf8,
+0 0 20px #38bdf8,
+0 0 40px #38bdf8;
+}
+to{
+text-shadow:
+0 0 20px #38bdf8,
+0 0 40px #38bdf8,
+0 0 80px #38bdf8,
+0 0 120px #38bdf8;
+}
+}
+
+.subtitle{
+font-size:22px;
+margin-top:15px;
+color:#e2e8f0;
 }
 
 .btn{
 display:inline-block;
 padding:15px 30px;
 margin:10px;
-border-radius:10px;
+border-radius:12px;
 text-decoration:none;
 font-weight:bold;
+transition:.3s;
 }
 
 .discord{
 background:#5865F2;
 color:white;
+box-shadow:0 0 20px #5865F2;
 }
 
-.reglement{
+.discord:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+.vote{
 background:#38bdf8;
 color:black;
+box-shadow:0 0 20px #38bdf8;
+}
+
+.vote:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+section{
+padding:50px 20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+color:#38bdf8;
 }
 
 .cards{
@@ -59,25 +128,33 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:20px;
-padding:20px;
 }
 
 .card{
-background:rgba(255,255,255,.08);
-padding:20px;
-width:260px;
+width:280px;
+padding:25px;
 border-radius:15px;
+background:rgba(255,255,255,0.08);
 backdrop-filter:blur(10px);
+border:1px solid rgba(56,189,248,0.3);
+transition:.4s;
 }
 
-.vote{
-background:#38bdf8;
-color:black;
-padding:10px 20px;
-border-radius:8px;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+footer{
+margin-top:50px;
+padding:20px;
+text-align:center;
+background:rgba(0,0,0,0.3);
 }
 </style>
 
@@ -85,52 +162,86 @@ margin-top:10px;
 
 <body>
 
+<div class="stars"></div>
+
+<header>
 <h1>ASTRALYS</h1>
 
-<p>Bienvenue sur le serveur Astralys.</p>
+
+  
+<p class="subtitle">
+Bienvenue sur le serveur Astralys !
+</p>
 
 <a href="https://discord.gg/JAq4qahE2A" class="btn discord" target="_blank">
-Discord
+💬 Rejoindre le Discord
 </a>
 
-<a href="reglement.html" class="btn reglement">
-Règlement
+<a href="reglement.html" class="btn vote">
+📜 Voir le règlement
 </a>
+  
+</header>
 
-<h2>🗳️ Sites de vote</h2>
+<section>
+<h2>⚔️ Pourquoi rejoindre Astralys ?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Aventure</h3>
+<p>Explore un univers rempli de défis et de récompenses.</p>
+</div>
+
+<div class="card">
+<h3>Communauté</h3>
+<p>Une communauté active et accueillante.</p>
+</div>
+
+<div class="card">
+<h3>Événements</h3>
+<p>Participe à des événements exclusifs.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>🗳️ Vote pour Astralys</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Vote #1</h3>
-<a class="vote" href="https://serveur-minecraft.com/5643" target="_blank">Voter</a>
+<a href="https://serveur-minecraft.com/5643" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #2</h3>
-<a class="vote" href="https://www.serveursminecraft.org/serveur/7618" target="_blank">Voter</a>
+<a href="https://www.serveursminecraft.org/serveur/7618" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #3</h3>
-<a class="vote" href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" target="_blank">Voter</a>
+<a href="https://serveur-minecraft-vote.fr/serveurs/minephoria.2679" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #4</h3>
-<a class="vote" href="https://serveur-prive.net/minecraft/minephoria" target="_blank">Voter</a>
+<a href="https://serveur-prive.net/minecraft/minephoria" class="btn vote" target="_blank">Voter</a>
 </div>
 
 <div class="card">
 <h3>Vote #5</h3>
-<a class="vote" href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" target="_blank">Voter</a>
+<a href="https://top-serveurs.net/minecraft/vote/minephoria-6a12d0ff354bd" class="btn vote" target="_blank">Voter</a>
 </div>
 
 </div>
+</section>
 
-<footer style="margin-top:50px;padding:20px;">
+<footer>
 © 2026 ASTRALYS - Tous droits réservés<br>
-Site internet créé par <strong>MathiX</strong>
+Développement et design du site par <strong>MathiX</strong>
 </footer>
 
 </body>
