@@ -7,7 +7,6 @@
 
 <title>ASTRALYS</title>
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="logo.png">
 
 <style>
@@ -20,11 +19,11 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(-45deg,#050816,#0f172a,#1e1b4b,#312e81,#050816);
-background-size:400% 400%;
-animation:galaxy 15s ease infinite;
 color:white;
 overflow-x:hidden;
+background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#312e81,#0f172a);
+background-size:400% 400%;
+animation:galaxy 15s ease infinite;
 }
 
 @keyframes galaxy{
@@ -58,9 +57,9 @@ to{transform:translateY(-300px);}
 display:flex;
 align-items:center;
 justify-content:center;
-gap:30px;
-padding:40px 20px;
-min-height:80vh;
+gap:60px;
+padding:80px 20px;
+min-height:100vh;
 flex-wrap:wrap;
 }
 
@@ -68,17 +67,20 @@ flex-wrap:wrap;
 width:450px;
 max-width:90%;
 animation:
-floatLogo 4s ease-in-out infinite,
-glowLogo 3s ease-in-out infinite;
+float 4s ease-in-out infinite,
+glowPulse 4s ease-in-out infinite;
+filter:
+drop-shadow(0 0 20px #38bdf8)
+drop-shadow(0 0 40px #8b5cf6);
 }
 
-@keyframes floatLogo{
+@keyframes float{
 0%{transform:translateY(0);}
 50%{transform:translateY(-20px);}
 100%{transform:translateY(0);}
 }
 
-@keyframes glowLogo{
+@keyframes glowPulse{
 0%{
 filter:
 drop-shadow(0 0 20px #38bdf8)
@@ -97,50 +99,51 @@ drop-shadow(0 0 40px #8b5cf6);
 }
 
 .hero-text{
-max-width:500px;
+max-width:600px;
 }
 
-.hero-text h1{
+h1{
 font-size:100px;
 color:#38bdf8;
 text-shadow:
 0 0 10px #38bdf8,
 0 0 20px #38bdf8,
-0 0 40px #38bdf8,
-0 0 80px #38bdf8;
+0 0 40px #38bdf8;
 margin-bottom:25px;
 }
 
+.buttons{
+display:grid;
+grid-template-columns:repeat(2,220px);
+gap:15px;
+margin-bottom:20px;
+}
+
 .btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-border-radius:15px;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-.discord{
-background:#5865F2;
-color:white;
-box-shadow:0 0 20px #5865F2;
-}
-
-.rules{
+display:flex;
+justify-content:center;
+align-items:center;
+width:220px;
+height:60px;
 background:#8b5cf6;
 color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:12px;
 box-shadow:0 0 20px #8b5cf6;
-}
-
-.vote{
-background:#38bdf8;
-color:black;
-box-shadow:0 0 20px #38bdf8;
+transition:.3s;
 }
 
 .btn:hover{
 transform:translateY(-5px) scale(1.05);
+}
+
+.dev{
+font-size:28px;
+font-weight:bold;
+color:#facc15;
+text-shadow:0 0 15px #facc15;
+margin-top:10px;
 }
 
 section{
@@ -149,10 +152,9 @@ padding:60px 20px;
 
 .section-title{
 text-align:center;
-font-size:40px;
+font-size:45px;
 color:#38bdf8;
 margin-bottom:40px;
-text-shadow:0 0 20px #38bdf8;
 }
 
 .cards{
@@ -163,30 +165,30 @@ gap:25px;
 }
 
 .card{
-width:300px;
+width:280px;
 padding:25px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
 border-radius:20px;
-border:1px solid rgba(255,255,255,0.15);
-transition:.4s;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(56,189,248,.3);
 text-align:center;
+transition:.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 25px rgba(56,189,248,.5);
+box-shadow:0 0 25px rgba(56,189,248,.6);
 }
 
 .card h3{
-margin-bottom:15px;
 color:#38bdf8;
+margin-bottom:10px;
 }
 
 footer{
-text-align:center;
-padding:30px;
 margin-top:50px;
+padding:25px;
+text-align:center;
 background:rgba(0,0,0,.3);
 }
 
@@ -198,11 +200,24 @@ text-align:center;
 }
 
 .logo{
-width:320px;
+width:280px;
 }
 
-.hero-text h1{
-font-size:70px;
+h1{
+font-size:60px;
+}
+
+.buttons{
+grid-template-columns:1fr;
+justify-items:center;
+}
+
+.btn{
+width:260px;
+}
+
+.dev{
+font-size:22px;
 }
 
 }
@@ -216,38 +231,37 @@ font-size:70px;
 
 <section class="hero">
 
-<img src="logo.png" alt="Astralys" class="logo">
+<img src="logo.png" alt="Logo Astralys" class="logo">
 
 <div class="hero-text">
 
 <h1>ASTRALYS</h1>
 
-<a href="https://discord.gg/JAq4qahE2A"
-class="btn discord"
-target="_blank">
+<div class="buttons">
+
+<a href="https://discord.gg/JAq4qahE2A" class="btn" target="_blank">
 💬 Rejoindre le Discord
 </a>
 
-<a href="vote.html" class="btn vote" style="color:white;">
+<a href="vote.html" class="btn">
 🗳️ Voter
 </a>
 
-<a href="reglement.html"
-class="btn rules">
+<a href="reglement.html" class="btn">
 📜 Voir le règlement
 </a>
 
-  <a href="boutique.html"
-class="btn vote"
-style="color:white;">
+<a href="boutique.html" class="btn">
 🛒 Boutique
 </a>
 
-  <a href="support.html" class="btn rules">
+<a href="support.html" class="btn">
 🎫 Support
 </a>
 
-  <p style="margin-top:20px;font-size:20px;color:#facc15;font-weight:bold;text-shadow:0 0 10px #facc15;">
+</div>
+
+<p class="dev">
 🚧 Nous sommes actuellement en développement de la V2 🚧
 </p>
 
@@ -288,8 +302,10 @@ style="color:white;">
 </section>
 
 <footer>
+
 © 2026 ASTRALYS - Tous droits réservés<br>
 Développement et design du site par <strong>MathiX</strong>
+
 </footer>
 
 </body>
