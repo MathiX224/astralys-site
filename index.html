@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASTRALYS</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Arial',sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -39,7 +41,7 @@ background-image:
 radial-gradient(2px 2px at 20px 30px,#fff,transparent),
 radial-gradient(2px 2px at 80px 90px,#38bdf8,transparent),
 radial-gradient(1px 1px at 150px 50px,#fff,transparent),
-radial-gradient(2px 2px at 250px 150px,#38bdf8,transparent);
+radial-gradient(2px 2px at 250px 150px,#8b5cf6,transparent);
 background-size:300px 300px;
 animation:starsMove 20s linear infinite;
 }
@@ -49,49 +51,59 @@ from{transform:translateY(0);}
 to{transform:translateY(-300px);}
 }
 
-  header{
-padding:120px 20px;
-text-align:center;
-min-height:100vh;
+.hero{
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
+gap:60px;
+padding:80px 20px;
+min-height:100vh;
+flex-wrap:wrap;
+}
+
+.logo{
+width:500px;
+max-width:90%;
+animation:
+float 4s ease-in-out infinite,
+glowPulse 4s ease-in-out infinite;
+filter:
+drop-shadow(0 0 20px #38bdf8)
+drop-shadow(0 0 40px #8b5cf6);
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+25%{transform:translateY(-20px);}
+50%{transform:translateY(0);}
+75%{transform:translateY(20px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes glowPulse{
+0%{
+filter:
+drop-shadow(0 0 20px #38bdf8)
+drop-shadow(0 0 40px #8b5cf6);
+}
+50%{
+filter:
+drop-shadow(0 0 40px #38bdf8)
+drop-shadow(0 0 80px #8b5cf6);
+}
+100%{
+filter:
+drop-shadow(0 0 20px #38bdf8)
+drop-shadow(0 0 40px #8b5cf6);
+}
+}
+
+.hero-text{
+max-width:600px;
 }
 
 h1{
-font-size:120px;
-color:#38bdf8;
-text-transform:uppercase;
-animation:neon 2s infinite alternate;
-letter-spacing:8px;
-}
-
-.subtitle{
-font-size:26px;
-margin-top:15px;
-margin-bottom:30px;
-color:#e2e8f0;
-}
-
-.btn{
-display:inline-block;
-padding:18px 35px;
-margin:10px;
-border-radius:15px;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-font-size:18px;
-}
-
-.btn:hover{
-transform:translateY(-5px) scale(1.08);
-}
-}
-
-h1{
-font-size:90px;
+font-size:110px;
 color:#38bdf8;
 text-transform:uppercase;
 animation:neon 2s infinite alternate;
@@ -114,8 +126,8 @@ text-shadow:
 }
 
 .subtitle{
-font-size:22px;
-margin-top:15px;
+font-size:24px;
+margin:20px 0;
 color:#e2e8f0;
 }
 
@@ -135,8 +147,10 @@ color:white;
 box-shadow:0 0 20px #5865F2;
 }
 
-.discord:hover{
-transform:translateY(-5px) scale(1.05);
+.rules{
+background:#8b5cf6;
+color:white;
+box-shadow:0 0 20px #8b5cf6;
 }
 
 .vote{
@@ -145,40 +159,42 @@ color:black;
 box-shadow:0 0 20px #38bdf8;
 }
 
-.vote:hover{
+.btn:hover{
 transform:translateY(-5px) scale(1.05);
 }
 
 section{
-padding:50px 20px;
+padding:60px 20px;
 }
 
-h2{
+.section-title{
 text-align:center;
-margin-bottom:30px;
+font-size:40px;
 color:#38bdf8;
+margin-bottom:40px;
 }
 
 .cards{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:20px;
+gap:25px;
 }
 
 .card{
-width:280px;
+width:300px;
 padding:25px;
-border-radius:15px;
+border-radius:20px;
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(10px);
 border:1px solid rgba(56,189,248,0.3);
 transition:.4s;
+text-align:center;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 25px rgba(56,189,248,0.5);
+box-shadow:0 0 25px rgba(56,189,248,0.6);
 }
 
 .card h3{
@@ -187,11 +203,29 @@ color:#38bdf8;
 }
 
 footer{
-margin-top:50px;
-padding:20px;
+margin-top:60px;
+padding:25px;
 text-align:center;
 background:rgba(0,0,0,0.3);
 }
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.logo{
+width:320px;
+}
+
+h1{
+font-size:70px;
+}
+
+}
+
 </style>
 
 </head>
@@ -200,62 +234,58 @@ background:rgba(0,0,0,0.3);
 
 <div class="stars"></div>
 
-<header>
+<section class="hero">
+
+<img src="logo.png" alt="Logo Astralys" class="logo">
+
+<div class="hero-text">
+
 <h1>ASTRALYS</h1>
 
 <p class="subtitle">
-Bienvenue sur le serveur Astralys !
+Serveur Minecraft Survie • Économie • Claims • Événements
 </p>
 
 <a href="https://discord.gg/JAq4qahE2A" class="btn discord" target="_blank">
 💬 Rejoindre le Discord
 </a>
 
-<a href="reglement.html" class="btn vote">
+<a href="reglement.html" class="btn rules">
 📜 Voir le règlement
 </a>
 
-  <img src="logo.png" class="logo">
-.logo{
-width:450px;
-max-width:90%;
-margin-bottom:30px;
-animation:float 4s ease-in-out infinite;
-}
+</div>
 
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-20px);}
-100%{transform:translateY(0);}
-}
-  
-</header>
+</section>
 
 <section>
-<h2>⚔️ Pourquoi rejoindre Astralys ?</h2>
+
+<h2 class="section-title">⚔️ Pourquoi rejoindre Astralys ?</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Aventure</h3>
-<p>Explore un univers rempli de défis et de récompenses.</p>
+<h3>🌍 Survie</h3>
+<p>Explore un monde unique rempli d'aventures.</p>
 </div>
 
 <div class="card">
-<h3>Communauté</h3>
-<p>Une communauté active et accueillante.</p>
+<h3>💰 Économie</h3>
+<p>Commerce, ventes et progression économique.</p>
 </div>
 
 <div class="card">
-<h3>Événements</h3>
-<p>Participe à des événements exclusifs.</p>
+<h3>🎉 Événements</h3>
+<p>Participe à des événements exclusifs et gagne des récompenses.</p>
 </div>
 
 </div>
+
 </section>
 
 <section>
-<h2>🗳️ Vote pour Astralys</h2>
+
+<h2 class="section-title">🗳️ Vote pour Astralys</h2>
 
 <div class="cards">
 
@@ -285,11 +315,14 @@ animation:float 4s ease-in-out infinite;
 </div>
 
 </div>
+
 </section>
 
 <footer>
+
 © 2026 ASTRALYS - Tous droits réservés<br>
 Développement et design du site par <strong>MathiX</strong>
+
 </footer>
 
 </body>
