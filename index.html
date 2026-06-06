@@ -49,9 +49,45 @@ from{transform:translateY(0);}
 to{transform:translateY(-300px);}
 }
 
-header{
-padding:100px 20px;
+  header{
+padding:120px 20px;
 text-align:center;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+h1{
+font-size:120px;
+color:#38bdf8;
+text-transform:uppercase;
+animation:neon 2s infinite alternate;
+letter-spacing:8px;
+}
+
+.subtitle{
+font-size:26px;
+margin-top:15px;
+margin-bottom:30px;
+color:#e2e8f0;
+}
+
+.btn{
+display:inline-block;
+padding:18px 35px;
+margin:10px;
+border-radius:15px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+font-size:18px;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.08);
+}
 }
 
 h1{
