@@ -57,14 +57,13 @@ to{transform:translateY(-300px);}
 display:flex;
 align-items:center;
 justify-content:center;
-gap:60px;
-padding:80px 20px;
-min-height:70vh;
+gap:40px;
+padding:40px 20px;
 flex-wrap:wrap;
 }
 
 .logo{
-width:450px;
+width:420px;
 max-width:90%;
 animation:
 float 4s ease-in-out infinite,
@@ -100,29 +99,31 @@ drop-shadow(0 0 40px #8b5cf6);
 
 .hero-text{
 max-width:600px;
+text-align:center;
 }
 
 h1{
-font-size:100px;
+font-size:90px;
 color:#38bdf8;
 text-shadow:
 0 0 10px #38bdf8,
 0 0 20px #38bdf8,
 0 0 40px #38bdf8;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .buttons{
 display:grid;
 grid-template-columns:repeat(2,220px);
 gap:15px;
+justify-content:center;
 margin-bottom:20px;
 }
 
 .btn{
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 width:220px;
 height:60px;
 background:#8b5cf6;
@@ -138,30 +139,67 @@ transition:.3s;
 transform:translateY(-5px) scale(1.05);
 }
 
+.server-info{
+margin-top:20px;
+}
+
+.ip-box{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:15px;
+}
+
+.ip-box input{
+background:rgba(255,255,255,.1);
+border:1px solid #38bdf8;
+border-radius:10px;
+padding:10px;
+width:280px;
+color:white;
+text-align:center;
+}
+
+.ip-box button{
+background:#38bdf8;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.version{
+font-size:22px;
+margin-bottom:15px;
+}
+
 .dev{
-font-size:28px;
+font-size:26px;
 font-weight:bold;
 color:#facc15;
 text-shadow:0 0 15px #facc15;
-margin-top:10px;
 }
 
 section{
-padding:60px 20px;
+padding:20px;
 }
 
 .section-title{
 text-align:center;
-font-size:45px;
+font-size:42px;
 color:#38bdf8;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .cards{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:25px;
+gap:20px;
 }
 
 .card{
@@ -196,28 +234,30 @@ background:rgba(0,0,0,.3);
 
 .hero{
 flex-direction:column;
-text-align:center;
 }
 
 .logo{
-width:280px;
+width:260px;
 }
 
 h1{
-font-size:60px;
+font-size:55px;
 }
 
 .buttons{
 grid-template-columns:1fr;
-justify-items:center;
 }
 
 .btn{
 width:260px;
 }
 
+.version{
+font-size:18px;
+}
+
 .dev{
-font-size:22px;
+font-size:20px;
 }
 
 }
@@ -240,7 +280,7 @@ font-size:22px;
 <div class="buttons">
 
 <a href="https://discord.gg/JAq4qahE2A" class="btn" target="_blank">
-💬 Rejoindre le Discord
+💬 Discord
 </a>
 
 <a href="vote.html" class="btn">
@@ -248,7 +288,7 @@ font-size:22px;
 </a>
 
 <a href="reglement.html" class="btn">
-📜 Voir le règlement
+📜 Règlement
 </a>
 
 <a href="boutique.html" class="btn">
@@ -258,6 +298,30 @@ font-size:22px;
 <a href="support.html" class="btn">
 🎫 Support
 </a>
+
+</div>
+
+<div class="server-info">
+
+<div class="ip-box">
+
+<span>🌐 IP :</span>
+
+<input
+type="text"
+value="MinePhoria.aternos.me:49453"
+id="ip"
+readonly>
+
+<button onclick="copyIP()">
+📋 Copier
+</button>
+
+</div>
+
+<div class="version">
+🎮 Version : <strong>1.21.10</strong>
+</div>
 
 </div>
 
@@ -279,22 +343,22 @@ font-size:22px;
 
 <div class="card">
 <h3>🌍 Survie</h3>
-<p>Explore un monde rempli d'aventures et de défis.</p>
+<p>Explore un monde rempli d'aventures.</p>
 </div>
 
 <div class="card">
 <h3>💰 Économie</h3>
-<p>Développe ta richesse grâce aux commerces et échanges.</p>
+<p>Commerce, ventes et progression économique.</p>
 </div>
 
 <div class="card">
 <h3>🏰 Claims</h3>
-<p>Protège tes constructions et agrandis ton territoire.</p>
+<p>Protège tes constructions facilement.</p>
 </div>
 
 <div class="card">
 <h3>🎉 Événements</h3>
-<p>Participe à des événements exclusifs et gagne des récompenses.</p>
+<p>Participe à des événements exclusifs.</p>
 </div>
 
 </div>
@@ -307,6 +371,15 @@ font-size:22px;
 Développement et design du site par <strong>MathiX</strong>
 
 </footer>
+
+<script>
+function copyIP() {
+navigator.clipboard.writeText(
+document.getElementById("ip").value
+);
+alert("Adresse IP copiée !");
+}
+</script>
 
 </body>
 </html>
